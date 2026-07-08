@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 gcc -c $CFILE -o ${CFILE%.c}.o
+=======
+gcc -c $CFILE
+>>>>>>> 5818fdabd537e96142884983f42e684974fcd2fb

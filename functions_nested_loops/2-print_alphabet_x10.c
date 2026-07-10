@@ -12,14 +12,18 @@ void print_alphabet_x10(void)
 
 	letter = 'a';
 	counter = '0';
-	while (counter >= '9')
+	while (counter <= '9')
 	{
+		letter = 'a';
+	
 		while (letter <= 'z')
 		{
 			_putchar(letter);
 			letter++;
 		}
+
 	_putchar('\n');
 	counter++;
 	}
+	
 }

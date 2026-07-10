@@ -3,20 +3,16 @@
 #include <ctype.h>
 /**
 *print_alphabet - checks for lowercase character
+*@c: the char to check 
 *
-*Return: always 0.
+*Return: returns 1 if lowercase, 0 if not
 */
-int main(void)
+int _islower(int c)
 {
-	int c;
-	
-	c = _islower('H');
-	_putchar(c + '0');
-	c = _islower('o');
-	_putchar(c + '0');
-	c = _islower(108);
-	_putchar(c + '0');
-	_putchar('\n');
-	return (0);	
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	return (0);
 }
 

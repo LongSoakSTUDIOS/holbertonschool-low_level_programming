@@ -3,4 +3,6 @@
 
 int _putchar(char c);
 
+void print_alphanet(void);
+
 #endif

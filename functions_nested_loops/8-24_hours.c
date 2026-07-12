@@ -4,7 +4,7 @@
 *
 *Return: always 0
 */
-int jack_bauer(void)
+void jack_bauer(void)
 {
 	int hour;
 	int minute;
@@ -32,6 +32,4 @@ int jack_bauer(void)
 	putchar(':');
 	putchar(minute);
 	putchar('\n');
-
-	return (0);	
 }

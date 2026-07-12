@@ -1,8 +1,8 @@
 #include "main.h"
 /**
 *add - adds two ints and returns the sum
-*@a - int
-*@b - int
+*@a: int
+*@b: int
 *
 *Return: always 0
 */

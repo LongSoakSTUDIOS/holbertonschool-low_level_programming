@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
 *main - runs a simple calulator
 *
@@ -12,19 +13,25 @@ int main(void)
 	int secNum;
 	int sum;
 	
-	response = 0;
 	responded = 0;
 	firstNum = 0;
 	secNum = 0;
 	sum = 0;
 	printf("Simple Calculator \n 1) Add \n 2) Subtract \n 3) Multiply \n 4) Divide \n 0) Quit \n");
+	printf("Choice: ");
+	scanf("%d", &response);
 	while (responded == 0)
 	{
-		printf("Choice: ");
-		scanf("%d", &response);
-		if (response > 5 || response < 0) /*handling invalid choices*/
+		if (response > 5 || response < 0) /* invalid choice */
 		{
 			printf("Please enter a valid choice: ");
+			scanf("%d", &response);
+			responded = 0;
+		}
+		if (!isdigit(response))
+		{
+			printf("Please enter a valid choice: ");
+			scanf("%d", &response);
 			responded = 0;
 		}
 		if (response == 0) /* quitting */
@@ -41,7 +48,45 @@ int main(void)
 			printf("B: ");
 			scanf("%i", &secNum);
 			sum = firstNum + secNum;
-			printf("Result: %i\n", sum);
+			printf("Result: %d\n", sum);
+		}
+		if (response == 2) /* subtraction */
+		{
+			responded = 1;
+			printf("A: ");
+			scanf("%i", &firstNum);
+			printf("B: ");
+			scanf("%i", &secNum);
+			sum = firstNum - secNum;
+			printf("Result: %d\n", sum);
+		}
+		if (response == 3) /* multiplcation */
+		{
+			responded = 1;
+			printf("A: ");
+			scanf("%i", &firstNum);
+			printf("B: ");
+			scanf("%i", &secNum);
+			sum = firstNum * secNum;
+			printf("Result: %d\n", sum);
+		}
+		if (response == 4) /* division */
+		{
+			responded = 1;
+			printf("A: ");
+			scanf("%d", &firstNum);
+			printf("B: ");
+			scanf("%d", &secNum);
+			if (secNum == 0)
+			{
+				printf("Error: division by zero\n");
+				return (0);
+			}
+			else
+			{
+				sum = firstNum / secNum;
+				printf("Result: %d\n", sum);
+			}
 		}
 	}
 	return (0);

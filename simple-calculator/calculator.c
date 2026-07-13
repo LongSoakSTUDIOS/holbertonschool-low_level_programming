@@ -12,7 +12,7 @@ int main(void)
 	int firstNum;
 	int secNum;
 	int sum;
-	
+
 	responded = 0;
 	firstNum = 0;
 	secNum = 0;
@@ -23,12 +23,6 @@ int main(void)
 	while (responded == 0)
 	{
 		if (response > 5 || response < 0) /* invalid choice */
-		{
-			printf("Please enter a valid choice: ");
-			scanf("%d", &response);
-			responded = 0;
-		}
-		if (!isdigit(response))
 		{
 			printf("Please enter a valid choice: ");
 			scanf("%d", &response);
@@ -84,8 +78,9 @@ int main(void)
 			}
 			else
 			{
-				sum = firstNum / secNum;
-				printf("Result: %d\n", sum);
+				float sum = (float)firstNum / secNum;
+
+				printf("Result: %.2f\n", sum);
 			}
 		}
 	}

@@ -11,12 +11,15 @@ void print_array(int *a, int n)
     int counter;
 
     counter = 0;
-
-    while (counter <= n)
+    while (counter < n)
     {
-        _putchar(a[counter]);
-		_putchar(',');
-		_putchar(' ');
+		printf(a[counter]);
+
+		while (counter != n)
+		{
+			_putchar(',');
+			_putchar(' ');
+		}
 		counter++;
     }
 	_putchar('\n');

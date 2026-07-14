@@ -3,7 +3,7 @@
  * print_rev - prints a string in reverse followed by a new line
  * @s: pointer to a char
  *
- * Return: null
+ * Return: nothing
  */
 void print_rev(char *s)
 {
@@ -14,7 +14,7 @@ void print_rev(char *s)
     {
 		counter++;
     }
-	while (counter > 0)
+	while (counter - 1 >= 0)
 	{
 		_putchar(s[counter]);
 		counter--;

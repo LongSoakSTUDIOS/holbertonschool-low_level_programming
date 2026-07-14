@@ -19,9 +19,9 @@ void puts_half(char *str)
     counter--;
     length = counter;
     if (length % 2 == 1)
-        counter = (counter + 1) / 2;
+        counter = ((length + 1) / 2) + 1;
     else
-        counter = counter / 2;
+        counter = length / 2;
     while (counter <= length)
     {
         _putchar(str[counter]);

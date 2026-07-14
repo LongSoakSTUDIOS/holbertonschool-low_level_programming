@@ -17,7 +17,7 @@ void puts2(char *str)
         counter += 1;
 	}
 	length = counter;
-	while (str[counter] != '\0' || str[counter] >= length)
+	while (str[counter] != '\0' || counter >= length)
     {
 		_putchar(str[counter]);
         counter += 2;

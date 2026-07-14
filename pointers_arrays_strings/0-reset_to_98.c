@@ -2,9 +2,10 @@
 /**
  * reset_to_98 - updates value to 98
  * 
- * Return: Always 0
+ * Return: null
  */
 void reset_to_98(int *n)
 {
     *n = 98;
+
 }

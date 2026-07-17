@@ -1,12 +1,12 @@
 /**
- * *_strncopy - concatenates two strings
+ * *_strncpy - concatenates two strings
  * @dest: pointer to string
  * @src: pointer to string
  * @int: amount of bytes avaliable
  *
  * Return: pointer to string
  */
-char *_strncopy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
     int counter;
     int length;

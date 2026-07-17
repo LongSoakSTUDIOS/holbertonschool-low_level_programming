@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * *_atioi - coverts a string to an integer
+ * *_atoi - coverts a string to an integer
  * @s:  pointer to string
- * Return: the pointer to dest
+ * Return: int
  */
 int _atoi(char *s)
 {
@@ -15,9 +15,13 @@ int _atoi(char *s)
 	sign = 1;
 	while(s[counter] != '\0')
 	{
+		if (s[counter] == ';')
+		{
+			return (res * sign);
+		}
 		if (s[counter] == '-')
 		{
-			sign = -1;
+			sign = (sign * -1);
 			counter++;
 		}
 		else if (s[counter] == '+')

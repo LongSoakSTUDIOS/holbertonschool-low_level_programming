@@ -20,14 +20,14 @@ int _atoi(char *s)
 			sign = -1;
 			counter++;
 		}
-		if (s[counter] == '+')
+		else if (s[counter] == '+')
 			counter++;
-		if (s[counter] >= '0' && s[counter] <= '9' )
+		else if (s[counter] >= '0' && s[counter] <= '9' )
 		{
 			res = res * 10 + (s[counter] - '0');
 			counter++;
 		}
-		if (s[counter] < '0' && s[counter] > '9' )
+		else if (s[counter] < '0' || s[counter] > '9' )
 			counter++;
 	}
 	return (res * sign);

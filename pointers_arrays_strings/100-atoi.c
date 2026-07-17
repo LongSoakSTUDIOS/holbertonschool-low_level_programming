@@ -27,7 +27,7 @@ int _atoi(char *s)
         res = res * 10 + (s[counter] - '0');
         counter++;
     }
-	if (s[counter] <= '0' && s[counter] >= '9' )
+	if (s[counter] < '0' && s[counter] > '9' )
 	{
 		counter++;
 	}

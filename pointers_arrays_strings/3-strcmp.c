@@ -7,19 +7,22 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-    int value;
+    int value1;
+	int value2;
 	int counter;
 
-    value = 0;
+    value1 = 0;
+	value2 = 0;
 	counter = 0;
     while (s1[counter] != '\0')
 	{
-		if (s1[counter] == s2[counter])
-			value++;
-		else
-			value--;
+		if (s1[counter] != s2[counter])
+		{
+			value1 = s1[counter] - '\0';
+			value2 = s2[counter] - '\0';
+		}
 		counter++;
 	}
 
-    return (value);
+    return (value1 - value2);
 }

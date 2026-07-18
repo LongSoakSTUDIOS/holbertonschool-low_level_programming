@@ -11,16 +11,17 @@ char *cap_string(char *str)
 
     toCap = 0;
     counter = 0;
-    while (counter != '\0')
+    while (str[counter] != '\0')
     {
-        if (str[counter] >= 'a' && str[counter] <= 'z' && toCap == 0)
+        if (str[counter] == ' ' || str[counter] == '\t' || str[counter] == '\n'
+            || str[counter] == ',' || str[counter] == ';' || str[counter] == '.'
+            || str[counter] == '!' || str[counter] == '?' || str[counter] == '"'
+            || str[counter] == '(' || str[counter] == ')' || str[counter] == '{'
+            || str[counter] == '}')
+                toCap = 1;
+        else if (str[counter] >= 'a' && str[counter] <= 'z' && toCap == 0)
         {
             str[counter] = str[counter] - ('a' - 'A');
-            counter++;
-            toCap = 1;
-        }
-        else if (str[counter] >= 'SP' && str[counter] <= '/')
-        {
             counter++;
             toCap = 0;
         }

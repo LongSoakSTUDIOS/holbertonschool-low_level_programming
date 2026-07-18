@@ -1,5 +1,5 @@
 /**
- * print_rev - reverses the content of an array of ints
+ * reverse_array - reverses the content of an array of ints
  * @a: array to resevrse
  * @n: number of elements of the array
  *
@@ -9,13 +9,17 @@ void reverse_array(int *a, int n)
 {
     int counter;
     int tmp;
+    int end;
 
     counter = 0;
-    tmp = 1;
-    while (counter <= n) 
+    end = n - 1;
+    tmp = 0;
+    while (counter < end) 
     {
-        a[counter] = a[n-tmp];
-        tmp++;
+        tmp = a[counter];
+        a[counter] = a[end];
+        a[end] = tmp;
         counter++;
+        end--;
     }
 }

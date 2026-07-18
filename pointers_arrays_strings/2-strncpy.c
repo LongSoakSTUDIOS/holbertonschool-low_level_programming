@@ -18,6 +18,7 @@ char *_strncpy(char *dest, char *src, int n)
         counter++;
     }
     length = counter;
+    counter = 0;
     while (counter <= length)
     {
         dest[counter] = src[counter];

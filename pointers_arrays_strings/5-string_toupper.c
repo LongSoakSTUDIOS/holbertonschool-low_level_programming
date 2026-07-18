@@ -1,5 +1,5 @@
 /**
- * reverse_array - reverses the content of an array of ints
+ * string_toupper - reverses the content of an array of ints
  * @str: string to reverse
  * Return: string
  */

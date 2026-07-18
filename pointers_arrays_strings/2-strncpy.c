@@ -2,7 +2,7 @@
  * *_strncpy - concatenates two strings
  * @dest: pointer to string
  * @src: pointer to string
- * @int: amount of bytes avaliable
+ * @n: amount of bytes avaliable
  *
  * Return: pointer to string
  */

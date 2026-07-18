@@ -9,7 +9,7 @@ char *cap_string(char *str)
     int counter;
     int toCap;
 
-    toCap = 0;
+    toCap = 1;
     counter = 0;
     while (str[counter] != '\0')
     {

@@ -18,8 +18,11 @@ char *cap_string(char *str)
             || str[counter] == '!' || str[counter] == '?' || str[counter] == '"'
             || str[counter] == '(' || str[counter] == ')' || str[counter] == '{'
             || str[counter] == '}')
+            {
                 toCap = 1;
-        else if (str[counter] >= 'a' && str[counter] <= 'z' && toCap == 0)
+                counter++;
+            }
+        else if (str[counter] >= 'a' && str[counter] <= 'z' && toCap == 1)
         {
             str[counter] = str[counter] - ('a' - 'A');
             counter++;

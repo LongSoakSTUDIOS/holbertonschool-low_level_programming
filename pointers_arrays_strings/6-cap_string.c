@@ -20,16 +20,13 @@ char *cap_string(char *str)
             || str[counter] == '}')
             {
                 toCap = 1;
-                counter++;
             }
         else if (str[counter] >= 'a' && str[counter] <= 'z' && toCap == 1)
         {
             str[counter] = str[counter] - ('a' - 'A');
-            counter++;
             toCap = 0;
         }
-        else
-            counter++;
+        counter++;
     }
     return (str);
 }

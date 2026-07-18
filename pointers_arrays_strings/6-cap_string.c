@@ -18,5 +18,6 @@ char *cap_string(char *str)
         }
         else
             counter++;
-    }       
+    }
+    return (str);
 }

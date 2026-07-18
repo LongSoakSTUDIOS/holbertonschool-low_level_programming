@@ -20,9 +20,10 @@ int _strcmp(char *s1, char *s2)
 		{
 			value1 = s1[counter] - '\0';
 			value2 = s2[counter] - '\0';
+			return (value1 - value2);
 		}
 		counter++;
 	}
 
-    return (value1 - value2);
+    return (0);
 }

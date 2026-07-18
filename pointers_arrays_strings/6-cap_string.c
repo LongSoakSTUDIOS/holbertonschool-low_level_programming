@@ -21,9 +21,10 @@ char *cap_string(char *str)
             {
                 toCap = 1;
             }
-        else if (str[counter] >= 'a' && str[counter] <= 'z' && toCap == 1)
+        else 
         {
-            str[counter] = str[counter] - ('a' - 'A');
+            if (str[counter] >= 'a' && str[counter] <= 'z' && toCap == 1)
+                str[counter] = str[counter] - ('a' - 'A');
             toCap = 0;
         }
         counter++;

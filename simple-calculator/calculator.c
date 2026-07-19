@@ -3,86 +3,48 @@
 /**
 *main - runs a simple calulator
 *
-*Returns: always 0
+*Return: always 0
 */
 int main(void)
 {
 	int response;
-	int responded; /*0 for false, 1 for true*/
 	int firstNum;
 	int secNum;
-	int sum;
 
-	responded = 0;
-	firstNum = 0;
-	secNum = 0;
-	sum = 0;
-	printf("Simple Calculator \n 1) Add \n 2) Subtract \n 3) Multiply \n 4) Divide \n 0) Quit \n");
+	printf("Simple Calculator\n1) Add\n2) Subtract\n3) ");
+	printf("Multiply\n4) Divide\n0) Quit\n");
 	printf("Choice: ");
-	scanf("%d", &response);
-	while (responded == 0)
+	scanf("%i", &response);
+	printf("A: ");
+	scanf("%d", &firstNum);
+	printf("B: ");
+	scanf("%d", &secNum);
+	if (response > 5 || response < 0) /* invalid choice */
 	{
-		if (response > 5 || response < 0) /* invalid choice */
+		printf("Please enter a valid choice: ");
+		scanf("%d", &response);
+	}
+	if (response == 0) /* quitting */
+	{
+		printf("Bye!\n");
+		return (0);
+	}
+	if (response == 1)
+		printf("Result: %d\n", firstNum + secNum);
+	if (response == 2)
+		printf("Result: %d\n", firstNum - secNum);
+	if (response == 3)
+		printf("Result: %d\n", firstNum * secNum);
+	if (response == 4)
+	{
+		if (secNum == 0)
 		{
-			printf("Please enter a valid choice: ");
-			scanf("%d", &response);
-			responded = 0;
+		printf("Error: division by zero\n");
+		return (0);
 		}
-		if (response == 0) /* quitting */
-		{
-			printf("Bye!\n");
-			responded = 1;
-			return (0);
-		}
-		if (response == 1) /* addition*/
-		{
-			responded = 1;
-			printf("A: ");
-			scanf("%i", &firstNum);
-			printf("B: ");
-			scanf("%i", &secNum);
-			sum = firstNum + secNum;
-			printf("Result: %d\n", sum);
-		}
-		if (response == 2) /* subtraction */
-		{
-			responded = 1;
-			printf("A: ");
-			scanf("%i", &firstNum);
-			printf("B: ");
-			scanf("%i", &secNum);
-			sum = firstNum - secNum;
-			printf("Result: %d\n", sum);
-		}
-		if (response == 3) /* multiplcation */
-		{
-			responded = 1;
-			printf("A: ");
-			scanf("%i", &firstNum);
-			printf("B: ");
-			scanf("%i", &secNum);
-			sum = firstNum * secNum;
-			printf("Result: %d\n", sum);
-		}
-		if (response == 4) /* division */
-		{
-			responded = 1;
-			printf("A: ");
-			scanf("%d", &firstNum);
-			printf("B: ");
-			scanf("%d", &secNum);
-			if (secNum == 0)
-			{
-				printf("Error: division by zero\n");
-				return (0);
-			}
-			else
-			{
-				float sum = (float)firstNum / secNum;
+		else
+			printf("Result: %.2f\n", (float)firstNum / secNum);
 
-				printf("Result: %.2f\n", sum);
-			}
-		}
 	}
 	return (0);
 }

@@ -1,0 +1,19 @@
+#include <stddef.h>
+
+/**
+ * *create_array(unsigned int size, char c)
+ * size:
+ * c:
+ *
+ * Return: 
+ */
+char *create_array(unsigned int size, char c)
+{
+	if (size == 0)
+	{
+		return (NULL)
+	}
+	else
+		t = malloc(sizeof(*t) * n);
+	return (t);
+}

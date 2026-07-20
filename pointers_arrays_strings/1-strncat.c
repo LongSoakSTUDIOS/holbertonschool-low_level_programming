@@ -9,9 +9,9 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-    int length1;
-    int length2;
-    int counter;
+	int length1;
+	int length2;
+	int counter;
 
     length1 = 0;
     length2 = 0;

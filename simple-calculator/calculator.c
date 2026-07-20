@@ -27,9 +27,7 @@ int main(void)
 			{
 				printf("Please enter a valid choice: \n");
 				while ((c = getchar()) != '\n' && c != EOF)
-				{
 					;
-				}
 			}
 			else
 				valid_input = 1;
@@ -47,9 +45,7 @@ int main(void)
 			{
 				printf("Please enter a valid number: \n");
 				while ((c = getchar()) != '\n' && c != EOF)
-				{
 					;
-				}
 			}
 			else
 				valid_input = 1;
@@ -62,9 +58,7 @@ int main(void)
 			{
 				printf("Please enter a valid number: \n");
 				while ((c = getchar()) != '\n' && c != EOF)
-				{
 					;
-				}
 			}
 			else
 				valid_input = 1;

@@ -6,14 +6,15 @@
  * malloc_checked - allocates memory using malloc
  * @b: int
  *
- * Return: 98 on fail, pointer to memory on success
+ * return: 98 on fail, pointer to memory on success
  */
 void  *malloc_checked(unsigned int b)
 {
-	int *t;
+	void *t;
 
-	t = malloc(sizeof(int) * b);
+	t = malloc(b);
 	if (t == NULL)
 		exit(98);
 	return(t);
 }
+

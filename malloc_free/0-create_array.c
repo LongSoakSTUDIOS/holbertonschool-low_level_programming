@@ -2,21 +2,29 @@
 #include <stdlib.h>
 
 /**
- * *create_array(unsigned int size, char c)
- * size:
+ * *create_array - create an array of chars, initialise with c
+ * size: 
  * c:
  *
- * Return: 
+ * Return: null if size = 0, otherwise pointer to array
  */
 char *create_array(unsigned int size, char c)
 {
-	int *t;
+	char *t;
+	unsigned int i;
 
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	else
-		t = malloc(sizeof(*t) * n);
+	
+
+	t = malloc(sizeof(char) * size);
+
+	while(i < size)
+	{
+		t[i] = c;
+		i++;
+	}
 	return (t);
 }

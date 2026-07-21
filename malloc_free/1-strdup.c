@@ -15,28 +15,21 @@ char *_strdup(char *str)
 
 	i = 0;
 	length = 0;
-
 	if (str == NULL)
 		return (NULL);
-
-	while (i != '\0')
+	while (str[i] != '\0')
 		i++;
-	i++;
 	length = i;
-
-	dup = malloc(sizeof(char) * length);
-
+	dup = malloc(sizeof(char) * (length + 1));
 	if (dup == NULL)
 		return (NULL);
-
 	i=0;
-	while(i <= length)
+	while(i < length)
 	{
 		dup[i] = str[i];
 		i++;
 	}
 	dup[length + 1] = '\0';
-
 	return (dup);
 }
 

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * str_concat(char *s1, char *s2)
+ * str_concat - join two strings
  * @s1: pointer to string
  * @s2:	pointer to string
  *
@@ -21,7 +21,10 @@ char *str_concat(char *s1, char *s2)
 	j = 0;
 	length1 = 0; 
 	length2 = 0;
-
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	while (s1[i] != '\0')
 		i++;
 	length1 = i;
@@ -32,6 +35,7 @@ char *str_concat(char *s1, char *s2)
 	catted = malloc(sizeof(char) * (cat_length + 1));
 	if (catted == NULL)
 		return (NULL);
+	
 	i = 0;
 	j = 0;
 	while(i < length1)
@@ -45,6 +49,7 @@ char *str_concat(char *s1, char *s2)
 		j++;
 	}
 	catted[cat_length + 1] = '\0';
+	
 
 	return(catted);
 }

@@ -17,9 +17,14 @@ int main(int argc, char **argv)
 	int (*func)(int, int);
 	int sum;
 
+	if (argc < 4)
+	{
+		printf("Error");
+		exit(98);
+	}
 	if (argc > 4)
 	{
-		printf("Errormain");
+		printf("Error");
 		exit(98);
 	}
 	num1 = atoi(argv[1]);

@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * get_op_func - 
+ * get_op_func - provides operation
  * @s: string
  *
  * Return: 99 on fail, operator on success
@@ -18,17 +18,17 @@ int (*get_op_func(char *s))(int, int)
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}
-    		};
+		};
 	int i;
 
 	i = 0;
-	while (i < 5)
+	while (ops[i].op != NULL)
 	{
-		if (((char *)ops[i][0])[0] == s)
-			return (ops[i][1]);
+		if (strcmp(ops[i].op, s) == 0)
+			return (ops[i].f);
 		i++;
 	}
-	printf("Error\n");
-	exit (99);
+	printf("Errorgetop\n");
+	exit(99);
 }
 

@@ -39,7 +39,7 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - divides two ints 
+ * op_div - divides two ints
  * @a: int
  * @b: int
  *
@@ -50,13 +50,13 @@ int op_div(int a, int b)
 	if (b == 0)
 	{
 		printf("Error");
-		exit (100);
+		exit(100);
 	}
 	else
 		return (a / b);
 }
 /**
- * op_mod - 
+ * op_mod - mod
  * @a: int
  * @b: int
  *

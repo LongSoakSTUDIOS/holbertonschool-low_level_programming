@@ -31,7 +31,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	va_start(ag, format);
 
-	while (formats[i].formatchar != NULL)
+	while (formats[i].formatchar != NULL && format != NULL)
 	{
 		j = 0;
 		while (format[j] != '\0')

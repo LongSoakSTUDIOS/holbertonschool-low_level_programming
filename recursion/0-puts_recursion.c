@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
  * _puts_recursion - prints a string via recursion
@@ -14,6 +15,6 @@ void _puts_recursion(char *s)
 		printf("\n");
 		return;
 	}
-	_putchar(*s);
+	write(1, &*s, 1);
 	_puts_recursion(s + 1);
 }

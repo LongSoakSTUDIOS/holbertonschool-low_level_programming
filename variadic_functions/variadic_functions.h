@@ -5,7 +5,13 @@
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
-typedef struct op{
+/**
+ * struct op - holds character and coorsponding function
+ * @formatchar: string
+ * @f: function
+ */
+typedef struct op
+{
 	char *formatchar;
 	void (*f)(va_list);
 

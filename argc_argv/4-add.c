@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 	int sum;
 	int nextNum;
 
+	printf("%d\n", atoi("9e8"));
 	if (argc == 1)
 	{
 		printf("%d\n", 0);

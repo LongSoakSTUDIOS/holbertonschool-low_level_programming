@@ -3,39 +3,6 @@
 #include "variadic_functions.h"
 #include <string.h>
 
-typedef struct op{
-	char *formatchar;
-	void (*f)(va_list);
-
-}	formats_t;
-
-void printchar(va_list var)
-{
-	vprintf("%c", var);
-}
-
-void printint(va_list var)
-{
-	vprintf("%d", var);
-}
-
-void printfloat(va_list var)
-{
-	vprintf("%.2f", var);
-}
-
-void printstring(va_list var)
-
-{
-	char *s;
-	s = va_arg(var, char *);
-	if (var == NULL)
-	{
-		s = "(nil)";
-	}
-	printf("%s", s);
-}
-
 /**
  * print_all - prints anything input
  * @format: format of inputted args
@@ -75,3 +42,28 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 
+void printchar(va_list var)
+{
+	vprintf("%c", var);
+}
+
+void printint(va_list var)
+{
+	vprintf("%d", var);
+}
+
+void printfloat(va_list var)
+{
+	vprintf("%.2f", var);
+}
+
+void printstring(va_list var)
+{
+	char *s;
+	s = va_arg(var, char *);
+	if (var == NULL)
+	{
+		s = "(nil)";
+	}
+	printf("%s", s);
+}

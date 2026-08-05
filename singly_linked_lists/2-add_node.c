@@ -25,13 +25,14 @@ list_t *add_node(list_t **head, const char *str)
 	dup = strdup(str);
 	if (dup == NULL)
 	{
+		free(new_node);
 		return (NULL);
 	}
 	while (dup[i] != '\0')
 	{
 		i++;
 	}
-	
+
 	new_node->str = dup;
 	new_node->len = i;
 	new_node->next = *head;

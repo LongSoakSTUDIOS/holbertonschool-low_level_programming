@@ -11,9 +11,9 @@ void _print_rev_recursion(char *s)
 {
 	if (*s == '\0')
 	{
-		printf("\n");
+		_putchar('\n');
 		return;
 	}
 	_print_rev_recursion(s + 1);
-	printf("%c", *s);
+	_putchar(*s);
 }

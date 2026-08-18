@@ -8,8 +8,8 @@
  * read_textfile - reads a text file and prints to stout
  * @filename: name of file to read
  * @letters: number of letters to read and print
- * 
- * Return - 0 on failure, 
+ *
+ * Return: 0 on failure, size_t on sucess
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -21,7 +21,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-
 	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
 	{
@@ -33,7 +32,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buf);
 		return (0);
 	}
-	
 	r = read(fd, buf, letters);
 	if (r == -1)
 	{
@@ -41,17 +39,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-
-	w = write(1, buf, r);
+	w = write(STDOUT_FILENO, buf, r);
 	if (w == -1)
 	{
 		free(buf);
 		close(fd);
 		return (0);
 	}
-
 	free(buf);
 	close(fd);
-
-	return w;
+	return (w);
 }

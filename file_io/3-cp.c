@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
 	fd2 = open(file2, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
 		exit(99);
 	}
 	while ((r = read(fd1, buffer, 1024)) > 0)
@@ -56,12 +57,12 @@ int main(int argc, char *argv[])
 	}
 	if (close(fd1) == -1)
 	{
-		dprintf(1, "Error: Can't close fd");
+		dprintf(STDERR_FILENO, "Error: Can't close fd");
 		exit(100);
 	}
 	if (close(fd2) == -1)
 	{
-		dprintf(1, "Error: Can't close fd");
+		dprintf(STDERR_FILENO, "Error: Can't close fd");
 		exit(100);
 	}
 	

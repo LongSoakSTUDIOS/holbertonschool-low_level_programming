@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	fd1 = open(file1, O_RDONLY);
 	if (fd1 == -1)
 	{
-		dprintf(1, "Can't read from file %s\n", file1);
+		dprintf(1, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
 	fd2 = open(file2, O_WRONLY | O_CREAT | O_TRUNC, 0664);

@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	file2 = argv[2];
 	buffer = malloc(1024);
 	if (buffer == NULL)
-		return -1;
+		return 0;
 
 	fd1 = open(file1, O_RDONLY);
 	if (fd1 == -1)
@@ -66,5 +66,5 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	
-	return 1;
+	return 0;
 }

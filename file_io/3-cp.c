@@ -51,7 +51,6 @@ int main(int argc, char *argv[])
 		w = write(fd2, buffer, r);
 		if (w == -1 || w != r)
 		{
-			dprintf(2, "Error: Can't write to %s\n", file2);
 			exit(99);
 		}
 	}
